@@ -3,9 +3,6 @@ body {
 	font-size: 16px;
 }
 
-* {
-	outline: 1px solid red;
-}
 
 h1 {
 	color: steelblue;
@@ -59,6 +56,11 @@ li {
 
 .offList ul{
 	width: 60%;
-	margin: 0 auto;
+	margin: 0 auto;    
+   
+}
+
+.offList li {
+     text-decoration: line-through;
 }
 /* @media for li width from 60 to 30% center the top add button */
