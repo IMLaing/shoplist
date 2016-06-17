@@ -1,0 +1,64 @@
+body {
+	background: whitesmoke;
+	font-size: 16px;
+}
+
+* {
+	outline: 1px solid red;
+}
+
+h1 {
+	color: steelblue;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+
+button {
+	border-radius: 100%;
+	height: 3em;
+	width: 3em;
+	margin: 0 1em;
+	
+}
+
+.add {
+	background: blue;
+}
+
+.remove {
+	background-color: red;
+}
+
+.check {
+	background-color: green;
+}
+.submitItem {
+	height: 1.5em;
+	width: 30em;
+}
+.itemAdd form{
+	width: 60%;
+	margin: 0 auto;
+}
+section{
+	height: auto;
+	margin: 0px auto;
+	width: 80%;
+}
+
+li {
+	width: 60%;
+	margin: 1em auto;
+}
+
+.needList li, .offList li {
+	display: inline-block;
+}
+
+
+.offList ul{
+	width: 60%;
+	margin: 0 auto;
+}
+/* @media for li width from 60 to 30% center the top add button */
