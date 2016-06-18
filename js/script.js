@@ -14,15 +14,13 @@ $(document).ready(function(){
 	    }
 	});
 
-	$('ul.needList').on('click', 'button.check', function(){
-		console.log('clicked check to complete');
-
-
-	});
 	$('ul').on('click', 'button.remove', function(){
 		console.log('clicked remove to erase');
-		$('div.listItem').remove(this);
+		$(this).parent().remove();
+	});
 
-
+	$('ul').on('click', 'button.check', function(){
+		console.log('clicked check to complete');
+		$(this).parent().appendTo('#finItem');
 	});
 });

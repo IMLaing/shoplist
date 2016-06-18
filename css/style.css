@@ -20,11 +20,11 @@ button {
 	margin: 0 1em;
 	
 }
-section.onList > ul > button.check > i{
+body > section.onList > ul > div > button.check > i{
 	font-size: 2em;
 	color: darkgreen;
 }
-section.onList > ul > button.remove > i{
+body > section.onList > ul > div > button.remove > i{
 	font-size: 2em;
 }
 
