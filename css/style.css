@@ -28,10 +28,13 @@ body > section.onList > ul > div > button.remove > i{
 #addForm > button > i {
 	font-size: 1.8em;
 }
-.remove {
+#addID{
+	background: purple;
+}
+#removeID {
 	background-color: red;
 }
-.check {
+#checkID {
 	background-color: lightblue;
 }
 .submitItem {
