@@ -6,6 +6,7 @@ body {
 
 
 h1 {
+	font-family: Open Sans;
 	color: steelblue;
 	font-size: 2.5em;
 	text-align: center;
@@ -19,6 +20,14 @@ button {
 	margin: 0 1em;
 	
 }
+section.onList > ul > button.check > i{
+	font-size: 2em;
+	color: darkgreen;
+}
+section.onList > ul > button.remove > i{
+	font-size: 2em;
+}
+
 
 .add {
 	background: blue;
@@ -29,7 +38,7 @@ button {
 }
 
 .check {
-	background-color: green;
+	background-color: lightblue;
 }
 .submitItem {
 	height: 1.5em;
@@ -42,7 +51,7 @@ button {
 section{
 	height: auto;
 	margin: 0px auto;
-	width: 80%;
+	width: 60%;
 }
 
 li {

@@ -8,7 +8,7 @@ $(document).ready(function(){
 	    	alert('No item to add!');
 	    } else {
 	    	$('.needList').prepend("<li>" + $userinput.val() +
-	    		"</li> <button class='check'> CHECK </button> <button class='remove'> REMOVE </button>");
+	    		"</li> <button class='check'> <i class='fa fa-check'></i> </button> <button class='remove'> <i class='fa fa-times'></i> </button>");
 	    	console.log('add');
 	    	$userinput.val('');
 	    }
