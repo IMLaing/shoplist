@@ -3,22 +3,17 @@ body {
 	font-size: 1.5em;
 	font-family: IMLText;
 }
-
-
 h1 {
 	font-family: Open Sans;
 	color: steelblue;
 	font-size: 2.5em;
 	text-align: center;
 }
-
-
 button {
 	border-radius: 100%;
 	height: 3em;
 	width: 3em;
 	margin: 0 1em;
-	
 }
 body > section.onList > ul > div > button.check > i{
 	font-size: 2em;
@@ -27,16 +22,15 @@ body > section.onList > ul > div > button.check > i{
 body > section.onList > ul > div > button.remove > i{
 	font-size: 2em;
 }
-
-
-.add {
+#addForm > button  {
 	background: blue;
 }
-
+#addForm > button > i {
+	font-size: 1.8em;
+}
 .remove {
 	background-color: red;
 }
-
 .check {
 	background-color: lightblue;
 }
@@ -53,24 +47,26 @@ section{
 	margin: 0px auto;
 	width: 60%;
 }
-
 li {
 	width: 60%;
 	margin: 1em auto;
 }
-
 .needList li, .offList li {
 	display: inline-block;
 }
-
-
 .offList ul{
 	width: 60%;
 	margin: 0 auto;    
-   
 }
 
 .offList li {
      text-decoration: line-through;
 }
+.finCart {
+	color: green;
+}
+.startCart {
+	color: cyan;
+}
+
 /* @media for li width from 60 to 30% center the top add button */

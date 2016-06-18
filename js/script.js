@@ -23,4 +23,9 @@ $(document).ready(function(){
 		console.log('clicked check to complete');
 		$(this).parent().appendTo('#finItem');
 	});
+
+	$('#return').on('click', 'i', function(){
+		$(this).parent().appendTo('.needList')
+	})
+
 });
