@@ -24,8 +24,9 @@ $(document).ready(function(){
 		$(this).parent().appendTo('#finItem');
 	});
 
-	$('#return').on('click', 'i', function(){
-		$(this).parent().appendTo('.needList')
-	})
+	$('#finItem').on('click', '#addToList', function(){
+		$(this).parent().appendTo('.needList');
+		console.log('return to onList');
+	});
 
 });
