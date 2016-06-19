@@ -54,7 +54,7 @@ li {
 	width: 60%;
 	margin: 1em auto;
 }
-.needList li, .offList li {
+#needList li, .offList li {
 	display: inline-block;
 }
 .offList ul{
@@ -64,6 +64,7 @@ li {
 
 .offList li {
      text-decoration: line-through;
+     color: red;
 }
 .finCart {
 	color: green;
@@ -71,5 +72,7 @@ li {
 .startCart {
 	color: cyan;
 }
+
+
 
 /* @media for li width from 60 to 30% center the top add button */
