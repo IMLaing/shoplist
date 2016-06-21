@@ -1,55 +1,62 @@
-$(document).ready(function(){
-	console.log('ready!');
-	var $userinput = $('.submitItem');
-	var $buttons = "<button class='add' id='addID'> <i class='fa fa-plus'></i> </button><button class='check' id='checkID'><i class='fa fa-check'></i></button><button class='remove' id='removeID'><i class='fa fa-times'></i> </button>";
-	
-//enter text to submit to list	
-	$('#addForm').submit(function(event) {
-		event.preventDefault();
-		if ($userinput.val() == ''){
-	    	alert('No item to add!');
-	    } else {
-	    	$('#needList').prepend("<div class='listItem'><li >" + $userinput.val() +
-	    		"</li>" + $buttons + "</div>");
-	    	console.log('add and hide addToList');
-	    	$userinput.val('');
-	    	$('#addID').hide();
-	    };
-	});
+$(document).ready(function() {
+  console.log('ready!');
 
-//remove item from any list
-	$('ul').on('click', 'button.remove', function(){
-		console.log('clicked remove to erase');
-		$(this).parent().remove();
-	});
+  var $addItem = $('#enterItem').val();
 
-//move item to complete
-	$('ul').on('click', 'button.check', function(){
-		console.log('clicked check to complete');
-		var toFin = $(this).parent();
-		$(this).remove();
-		$('#finItem').append(toFin);
-		console.log('sent to finCart');
-		$('#addID').show();
-		console.log('#addID.show()');
+  // add item to .onList ul
 
-		
-	});
+  $('#userInput').submit(function(event) {
+    event.preventDefault();
+    var $userAdd = $('#enterItem').val();
+    if ($userAdd == '') {
+      console.log('alert trigged because no input to #userInput');
+      alert('No Item to Add');
+    } else {
+      console.log('append li.onListItem to ul.onList');
+      $('.onList ul').append("<li class='onListItem'><i id='complete' class='fa fa-check'></i>" + $userAdd + "<i id='remove' class='fa fa-trash-o'></i></li>");
+    };
+    console.log('clear submit field');
+    $('#enterItem').val('');
+  });
 
-	$('#finItem').on('click', '#addID', function(){
-		var reAdd = $(this).parent();
-		$(this).remove();
-		$('#needList').append(reAdd);
-		console.log('return to onList');
-		$(this).hide('#addID');
-		console.log('hiding #addID on return');
-	});
+  //remove item    
+  $('ul').on('click', '#remove', function() {
+  
+    $(this).parent().remove();
+    console.log('removed li');
+     
+  });
+  $('#clearComp').click(function(){
+        $('ul.compList').children().remove();
+  });
+   $('#clearList').click(function(){
+        $('ul.needList').children().remove();
+  });
+      //complete item
+  $('ul.needList').on('click', '#complete', function() {
+    var $transItem = $(this).parent();
+    $transItem.appendTo('ul.compList');
+    console.log('Item Completed!')
+    //remove buttons
+    $(this).siblings().remove();
+    $(this).remove();
+  });
 
-	
+  // return item
+  $('ul.compList').on('click', 'li', function(){
+    var $returnItem = $(this);
+    console.log($returnItem.text());
+    $userAdd= $returnItem.text();
+     console.log($userAdd);
+    $('.onList ul').append("<li class='onListItem'><i id='complete' class='fa fa-check'></i>" + $userAdd + "<i id='remove' class='fa fa-trash-o'></i></li>");
+    $(this).remove();
+  });
+
+  //sortable list using JQuery UI
   $(function() {
-    	$('#needList').sortable({axis: 'y'});
-    	$('#needList').disableSelection();
-  	});
+    $('.needList').sortable({
+      axis: 'y'
+    });
+  });
 
 });
-

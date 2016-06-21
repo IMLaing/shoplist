@@ -1,78 +1,63 @@
 body {
 	background: whitesmoke;
-	font-size: 1.5em;
 	font-family: IMLText;
 }
-h1 {
-	font-family: Open Sans;
-	color: steelblue;
-	font-size: 2.5em;
-	text-align: center;
-}
-button {
-	border-radius: 100%;
-	height: 3em;
-	width: 3em;
-	margin: 0 1em;
-}
-body > section.onList > ul > div > button.check > i{
-	font-size: 2em;
-	color: darkgreen;
-}
-body > section.onList > ul > div > button.remove > i{
-	font-size: 2em;
-}
-#addForm > button  {
-	background: blue;
-}
-#addForm > button > i {
-	font-size: 1.8em;
-}
-#addID{
-	background: purple;
-}
-#removeID {
-	background-color: red;
-}
-#checkID {
-	background-color: lightblue;
-}
-.submitItem {
-	height: 1.5em;
-	width: 30em;
-}
-.itemAdd form{
-	width: 60%;
-	margin: 0 auto;
-}
-section{
-	height: auto;
-	margin: 0px auto;
-	width: 60%;
-}
-li {
-	width: 60%;
-	margin: 1em auto;
-}
-#needList li, .offList li {
-	display: inline-block;
-}
-.offList ul{
-	width: 60%;
-	margin: 0 auto;    
+
+
+ul {
+  list-style: none;
+  width: 20em;
+  margin: 0 auto;
 }
 
-.offList li {
-     text-decoration: line-through;
-     color: red;
+ul.needList {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;  
 }
-.finCart {
-	color: green;
+
+#clearComp {
+  color: red;
+  font-size: .4em;
+  cursor: pointer;
 }
-.startCart {
-	color: cyan;
+#clearList {
+  color: red;
+  font-size: .4em;
+  cursor: pointer;
+}
+ul.needList i{
+  cursor:pointer;
+  cursor: -moz-pointer;
+  cursor: -webkit-pointer;  
+}
+
+.fullWrap {
+  font-size: 1.9em;
+  width: 40em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.needList li #complete{
+  color: green;  
+  float: left;
+}
+
+.needList li #remove{
+  color: red;
+  float: right;
+}
+
+.compList li{
+   cursor:alias;
+  color: darkblue;
+  text-decoration: line-through;
+}
+.compList li:hover{
+  cursor:alias;
+  color: green;
+  text-decoration: none;
 }
 
 
-
-/* @media for li width from 60 to 30% center the top add button */
