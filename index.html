@@ -4,32 +4,53 @@
 
 		<meta charset="UTF-8">
 		<title>Steel Trap Mental Helper</title>
+		<meta name="description" content="Shoping List App Thinkful">
+		<meta name="author" content="IMLaing">
+		<script src="https://use.fonticons.com/6b2a9c84.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Steel Trap Mental Helper</title>
 		<script src="https://use.fonticons.com/6b2a9c84.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<section class="itemAdd">
+    <div class="fullWrap">
+		<section>
 			<h1> Steel Trap Mental Helper </h1>
-				<form id='addForm'>
-					<input class="submitItem" type="text" placeholder="add item and press enter">
-					<button class="add" type="submit"> <i class="fa fa-plus"></i> </button>
+				<form id="userInput">
+					<input id='enterItem' type="text" placeholder="add item and press enter">
+					<button id='addToList' type="submit"> <i class="fa fa-plus"></i> </button>
 				</form>
 		</section>
-		<section class="onList">
-			<h1>What I Need:</h1>
-			<ul class="needList">
-			</ul>
+		<section>
+      <h1>What I Need <i id="clearList" class="fa fa-trash-o"></i></h1>
+      <div class="onList"> 
+      <ul class="needList">
+
+        <!-- where the list will go -->
+       </ul>      
+      </div>
 		</section>
-		<section class="offList">
-			<h1> Added to Cart </h1>
-			<ul>
-				<li>Juice</li>
-				<button class="add" id="return"> <i class="fa fa-plus"></i> </button>
-			</ul>
+		<section>
+			<h1> Complete <i id="clearComp" class="fa fa-trash-o"></i>     </h1>
+      <div class="offList">
+      			<ul class="compList">
+                     
+				  <!-- where the completed items go -->
+          
+			      </ul>
 		</section>
 
 		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
 		<script src="js/script.js"></script>
+      </div>
 	</body>
+
 </html>
